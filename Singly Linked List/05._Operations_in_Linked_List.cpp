@@ -135,7 +135,7 @@ void Insert_at_position(Node *&head, int value, int position)
         {
             Insert_at_tail(head, value);
         }
-        else if (count > position && position > 0)
+        else if (count >= position && position > 0)
         {
             Node *temp = head;
 
