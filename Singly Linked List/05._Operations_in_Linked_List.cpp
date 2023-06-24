@@ -113,7 +113,7 @@ void Insert_at_position(Node *&head, int value, int position)
 {
     Node *new_node = new Node(value);
 
-    if (position == 1)
+    if (position == 0)
     {
         Insert_at_head(head, value);
     }
@@ -122,7 +122,7 @@ void Insert_at_position(Node *&head, int value, int position)
     {
         Node *check = head;
 
-        int count = 0;
+        int count = -1;
 
         while (check != NULL)
         {
@@ -139,7 +139,7 @@ void Insert_at_position(Node *&head, int value, int position)
         {
             Node *temp = head;
 
-            for (int i = 1; i < position - 1; i++)
+            for (int i = 0; i < position - 1; i++)
             {
                 temp = temp->next;
             }
@@ -159,7 +159,7 @@ void Insert_at_position(Node *&head, int value, int position)
 
 void Delete_from_position(Node *&head, int position)
 {
-    if (position == 1)
+    if (position == 0)
     {
         Delete_head(head);
     }
@@ -168,7 +168,7 @@ void Delete_from_position(Node *&head, int position)
     {
         Node *check = head;
 
-        int count = 0;
+        int count = -1;
 
         while (check != NULL)
         {
@@ -186,7 +186,7 @@ void Delete_from_position(Node *&head, int position)
         {
             Node *temp = head;
 
-            for (int i = 1; i < position - 1; i++)
+            for (int i = 0; i < position - 1; i++)
             {
                 temp = temp->next;
             }
@@ -275,7 +275,7 @@ int main()
                 int value;
                 cin >> value;
 
-                cout << "Position of head : 1" << endl
+                cout << "Position of head : 0" << endl
                      << "Enter the position : ";
                 int position;
                 cin >> position;
@@ -285,7 +285,7 @@ int main()
 
             else if (option == 6)
             {
-                cout << "Position of head : 1" << endl
+                cout << "Position of head : 0" << endl
                      << "Enter the position : ";
                 int position;
                 cin >> position;
